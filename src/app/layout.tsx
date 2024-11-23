@@ -14,6 +14,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/icon.png",
+  },
   title: {
     template: "%s | ainai",
     default: "ainai",
