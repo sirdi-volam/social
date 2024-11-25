@@ -14,7 +14,7 @@ export default function Page() {
       <div className="flex h-full max-h-[40rem] w-full max-w-[64rem] overflow-hidden rounded-2xl bg-card shadow-2xl">
         <div className="md:w1/2 w-full space-y-10 overflow-y-auto p-10">
           <div className="space-y-1 text-center">
-            <h1 className="text-4xl font-bold">Регистрация в ainai</h1>
+            <h1 className="text-4xl font-bold">Регистрация</h1>
             <p className="text-muted-foreground">
               Место, где даже <span className="italic"> ты </span> может найти
               себе друга
