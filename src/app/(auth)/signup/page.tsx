@@ -29,8 +29,8 @@ export default function Page() {
         </div>
         <Image
           src={signupImage}
-          alt="Изображение входа в аккаунт"
-          title="Изображение входа в аккаунт"
+          alt="Изображение регистрации аккаунта"
+          title="Изображение регистрации аккаунта"
           className="hidden w-1/2 object-cover md:block"
         />
       </div>

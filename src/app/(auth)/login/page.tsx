@@ -23,8 +23,8 @@ export default function Page() {
         </div>
         <Image
           src={loginImage}
-          alt=""
-          title=""
+          alt="Изображение входа в аккаунт"
+          title="Изображение входа в аккаунт"
           className="hidden w-1/2 object-cover md:block"
         />
       </div>
