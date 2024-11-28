@@ -1,13 +1,24 @@
 "use client"
 
-import { useSession } from '@/app/(main)/SessionProvider'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuSeparator, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger } from './ui/dropdown-menu';
-import UserAvatar from './UserAvatar';
-import Link from 'next/link';
-import { Check, LogOutIcon, Monitor, Moon, Sun, UserIcon } from 'lucide-react';
 import { logout } from '@/app/(auth)/actions';
+import { useSession } from '@/app/(main)/SessionProvider'
 import { cn } from '@/lib/utils';
+import { Check, LogOutIcon, Monitor, Moon, Sun, UserIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuLabel, 
+  DropdownMenuPortal, 
+  DropdownMenuSeparator, 
+  DropdownMenuSub, 
+  DropdownMenuSubContent, 
+  DropdownMenuSubTrigger, 
+  DropdownMenuTrigger 
+} from './ui/dropdown-menu';
+import UserAvatar from './UserAvatar';
 
 interface UserButtonProps {
   className?: string
