@@ -1,33 +1,33 @@
-"use client"
+"use client";
 
-import { logout } from '@/app/(auth)/actions';
-import { useSession } from '@/app/(main)/SessionProvider'
-import { cn } from '@/lib/utils';
-import { Check, LogOutIcon, Monitor, Moon, Sun, UserIcon } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import Link from 'next/link';
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuLabel, 
-  DropdownMenuPortal, 
-  DropdownMenuSeparator, 
-  DropdownMenuSub, 
-  DropdownMenuSubContent, 
-  DropdownMenuSubTrigger, 
-  DropdownMenuTrigger 
-} from './ui/dropdown-menu';
-import UserAvatar from './UserAvatar';
+import { logout } from "@/app/(auth)/actions";
+import { useSession } from "@/app/(main)/SessionProvider";
+import { cn } from "@/lib/utils";
+import { Check, LogOutIcon, Monitor, Moon, Sun, UserIcon } from "lucide-react";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import UserAvatar from "./UserAvatar";
 
 interface UserButtonProps {
-  className?: string
+  className?: string;
 }
 
-export default function UserButton({className}: UserButtonProps) {
-  const {user} = useSession();
+export default function UserButton({ className }: UserButtonProps) {
+  const { user } = useSession();
 
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -37,9 +37,7 @@ export default function UserButton({className}: UserButtonProps) {
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuLabel>
-          Вошел в систему как @{user.username}
-        </DropdownMenuLabel>
+        <DropdownMenuLabel>Logged in as @{user.username}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <Link href={`/users/${user.username}`}>
           <DropdownMenuItem>
@@ -55,18 +53,18 @@ export default function UserButton({className}: UserButtonProps) {
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
               <DropdownMenuItem onClick={() => setTheme("system")}>
-                <Monitor className="mr2 s4" />
+                <Monitor className="mr-2 size-4" />
                 Системная тема
                 {theme === "system" && <Check className="ms-2 size-4" />}
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => setTheme("light")}>
-                <Sun className="mr2 s4" />
+                <Sun className="mr-2 size-4" />
                 Светлая
                 {theme === "light" && <Check className="ms-2 size-4" />}
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => setTheme("dark")}>
-                <Moon className="mr2 s4" />
-                Тёмная
+                <Moon className="mr-2 size-4" />
+                Темный
                 {theme === "dark" && <Check className="ms-2 size-4" />}
               </DropdownMenuItem>
             </DropdownMenuSubContent>
